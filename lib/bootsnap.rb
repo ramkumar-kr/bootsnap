@@ -7,7 +7,7 @@ module Bootsnap
   InvalidConfiguration = Class.new(StandardError)
 
   def self.setup(
-    cache_dir:,
+    cache_dir:'tmp/cache',
     development_mode: true,
     load_path_cache: true,
     autoload_paths_cache: true,
