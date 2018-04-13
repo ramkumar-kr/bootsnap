@@ -24,7 +24,7 @@ module Bootsnap
       attr_reader :load_path_cache, :autoload_paths_cache,
                   :loaded_features_index, :realpath_cache
 
-      def setup(cache_path:, development_mode:, active_support: true)
+      def setup(cache_path: 'tmp/cache', development_mode: true, active_support: true)
         store = Store.new(cache_path)
 
         @loaded_features_index = LoadedFeaturesIndex.new
